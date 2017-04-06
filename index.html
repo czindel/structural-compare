@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Diff</title>
+
+    <link type="text/css" rel="stylesheet" href="lib/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="lib/diff2html.css">-->
+    <style media="all" type="text/css">
+        .d2h-moved-tag{
+            display: none;
+        }
+    </style>
+
+    <!--<script type="text/javascript" src="lib/diff2html.js"></script>-->
+    <!--<script type="text/javascript" src="lib/diff2html-ui.js"></script>-->
+    <!--<script type="text/javascript" src="lib/difflib-browser.js"></script>-->
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1>HTML Diff</h1>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="expected_url">URL expected</label>
+                        <input value="data/example_expected.html"
+                               type="text" id="expected_url" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="expected_selector">Selector expected</label>
+                        <input value=".mod-article-intro" type="text" id="expected_selector" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="expected_selector_ignore">Selector expected ignore</label>
+                        <input value=".slider__item, .rte" type="text" id="expected_selector_ignore" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="actual_url">URL actual</label>
+                        <input value="data/example_actual.html"
+                               type="text" id="actual_url" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="actual_selector">Selector actual</label>
+                        <input value=".mod-article-intro" type="text" id="actual_selector" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <!--<button type="button" id="btn-compare_v1" class="btn btn-primary">compare v1</button>-->
+            <button type="button" id="btn-compare_v2" class="btn btn-primary">compare v2</button>
+
+            <br>
+            <br>
+            <hr>
+            <br>
+
+            <div id="log"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script type="text/javascript" src="lib/main.js"></script>-->
+<script type="text/javascript" src="source/main2.js"></script>
+
+</body>
+</html>
